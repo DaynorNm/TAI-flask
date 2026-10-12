@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes - Flask Ejemplo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Mi aplicación Flask</h1>
+        <nav>
+            <a href="{{ url_for('inicio') }}">Inicio</a>
+            <a href="{{ url_for('estudiantes') }}">Estudiantes</a>
+            <a href="{{ url_for('contacto') }}">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <section class="tarjeta">
+            <h2>Lista de estudiantes</h2>
+            <p>Esta tabla contiene datos de ejemplo.</p>
+
+            <div class="tabla-contenedor">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N.º</th>
+                            <th>Nombre</th>
+                            <th>Carrera</th>
+                            <th>Correo electrónico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ana López</td>
+                            <td>Ingeniería de Sistemas</td>
+                            <td>ana@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Carlos Pérez</td>
+                            <td>Ingeniería de Sistemas</td>
+                            <td>carlos@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>María Fernández</td>
+                            <td>Ingeniería de Sistemas</td>
+                            <td>maria@example.com</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <a class="boton" href="{{ url_for('inicio') }}">
+                Volver al inicio
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto académico - Flask</p>
+    </footer>
+</body>
+</html>
